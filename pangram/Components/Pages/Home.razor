@@ -1,7 +1,62 @@
 ﻿@page "/"
 
-<PageTitle>Home</PageTitle>
+<PageTitle>Calculator Panagramă</PageTitle>
 
-<h1>Hello, world!</h1>
+<p>
+    <label>
+        Panagramă: 
+        <input @bind="InputValue" @oninput="HandleInput" />
+    </label>
+    
+</p>
 
-Welcome to your new app.
+<p>
+    <label>Panagrama: [ @InputValue ]</label>
+</p>
+<p>
+    <label>Litere nefolosite: @LeftOver</label>
+</p>
+<p>
+    <label>Contor: @Count</label>
+</p>
+
+@code {
+    private const string Everything = "abcdefghijklmnopqrstuvwxyzăîșțâ";
+    private string? InputValue { get; set; }
+    private string? LeftOver { get; set; } = Everything;
+    public int Count { get; set; }
+
+    private void Leftovers(string a)
+    {
+        var result = new System.Text.StringBuilder();
+
+        var charactersInA = new HashSet<char>(a);
+
+        int count = 0;
+        foreach (char c in Everything)
+        {
+            if (!charactersInA.Contains(c))
+            {
+                result.Append(c);
+            }
+        }
+
+        foreach (char c in a)
+        {
+            if (Everything.Contains(c))
+            {
+                count++;
+            }
+        }
+
+        LeftOver = result.ToString();
+        Count = count;
+    }
+    private void HandleInput(ChangeEventArgs e)
+    {
+        string val = e.Value?.ToString() ?? "";
+        InputValue = val;
+
+        Leftovers(val);
+    }
+}

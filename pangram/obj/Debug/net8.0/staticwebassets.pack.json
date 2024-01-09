@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Work\\projects\\csharp\\pangram\\pangram\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\pangram.bundle.scp.css",
+      "PackagePath": "staticwebassets\\pangram.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Work\\projects\\csharp\\pangram\\pangram\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.pangram.props",
+      "PackagePath": "build\\pangram.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.pangram.props",
+      "PackagePath": "buildMultiTargeting\\pangram.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.pangram.props",
+      "PackagePath": "buildTransitive\\pangram.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.pangram.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
